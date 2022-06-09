@@ -14,7 +14,7 @@ public class Window extends JFrame implements ActionListener {
         frame.setVisible(true);
         frame.setLayout(new FlowLayout());
         frame.setSize(260, 100);
-        frame.setLocation(570, 300);
+        frame.setLocationRelativeTo(null);
 
         frame.setIconImage(icon.getImage());
 
@@ -31,10 +31,18 @@ public class Window extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == buttonCurrency){
+            frame.setVisible(false);
+            frame.dispose();
             System.out.println("Open curr. window");
+            CurrenyWindow currencyWindow = new CurrenyWindow();
+            currencyWindow.createCurrencyFrame();
         }
         if (e.getSource() == buttonMetrics){
+            frame.setVisible(false);
+            frame.dispose();
             System.out.println("Open metric window");
+            MetricWindow metricWindow = new MetricWindow();
+            metricWindow.createMetricFrame();
         }
     }
 }
