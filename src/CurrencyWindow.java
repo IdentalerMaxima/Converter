@@ -1,3 +1,5 @@
+import com.sun.net.httpserver.Request;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -6,7 +8,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.text.DecimalFormat;
 
-public class CurrencyWindow extends JFrame implements ActionListener, KeyListener {
+public class CurrencyWindow extends JFrame implements KeyListener {
 
     double LeiHuf = 80.38;
     double LeiEur = 0.20;
@@ -111,23 +113,11 @@ public class CurrencyWindow extends JFrame implements ActionListener, KeyListene
         convertedAmount.setText(convertedAmountS);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
 
     @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
-
+    public void keyTyped(KeyEvent e) {}
     @Override
-    public void keyPressed(KeyEvent e) {
-
-    }
-
+    public void keyPressed(KeyEvent e) {}
     @Override
-    public void keyReleased(KeyEvent e) {
-        Conversion();
-    }
+    public void keyReleased(KeyEvent e) {Conversion();}
 }
