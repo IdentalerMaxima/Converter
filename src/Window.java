@@ -34,7 +34,7 @@ public class Window extends JFrame implements ActionListener {
             frame.setVisible(false);
             frame.dispose();
             System.out.println("Open curr. window");
-            CurrenyWindow currencyWindow = new CurrenyWindow();
+            CurrencyWindow currencyWindow = new CurrencyWindow();
             currencyWindow.createCurrencyFrame();
         }
         if (e.getSource() == buttonMetrics){
